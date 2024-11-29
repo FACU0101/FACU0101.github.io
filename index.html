@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ProyectoMenu</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0, 100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    </head><br>
+    <body>
+        <header>
+            <h1>MENÚ</h1>
+            <h2>DISFRUTA DE LA MEJOR GASTRONOMÍA</h2>
+        </header>
+        <main>
+            <section>
+                <div class="container">
+                    <div class="izquierdo">
+                        <h3>PLATO PRINCIPAL</h3><br><br>
+                        <ul>
+                            <li><span class="producto">Hamburguesa con queso</span> <span class="precio">$8.00</span></li>
+                            <li><span class="producto">Sándwich de queso</span> <span class="precio">$6.00</span></li>
+                            <li><span class="producto">Hamburguesas de pollo</span> <span class="precio">$7.50</span></li>
+                            <li><span class="producto">Pollo picante</span> <span class="precio">$9.00</span></li>
+                            <li><span class="producto">Hot dog</span> <span class="precio">$5.00</span></li>
+                        </ul>
+                    </div>
+                    <div class="derecho">
+                        <img src="platoPrincipal.png" alt="">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="derecho">
+                        <img src="aperitivos.png" alt="">
+                    </div>
+                    <div class="izquierdo">
+                        <h3>APERITIVOS</h3><br><br>
+                        <ul>
+                            <li><span class="producto">Tostas y canapés</span> <span class="precio">$4.00</span></li>
+                            <li><span class="producto">Paté de mejillones</span> <span class="precio">$5.50</span></li>
+                            <li><span class="producto">Hojaldres y otras masas</span> <span class="precio">$3.50</span></li>
+                            <li><span class="producto">Tostas de ajo, queso y jalapeños</span> <span class="precio">$6.00</span></li>
+                            <li><span class="producto">Canapé de salmón ahumado y habas</span> <span class="precio">$7.00</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="izquierdo">
+                        <h3>BEBIDAS</h3><br><br>
+                        <ul>
+                            <li><span class="producto">Tequila, triple seco y jugo de lima o limón</span> <span class="precio">$5.00</span></li>
+                            <li><span class="producto">Té helado</span> <span class="precio">$2.00</span></li>
+                            <li><span class="producto">Zumo de naranja</span> <span class="precio">$3.00</span></li>
+                            <li><span class="producto">Daiquiri de Frutilla</span> <span class="precio">$6.50</span></li>
+                            <li><span class="producto">Ginebra y tónica</span> <span class="precio">$7.50</span></li>
+                        </ul>
+                    </div>
+                    <div class="derecho">
+                        <img src="bebidas.png" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer" class="text-center bg-dark text-light py-4">
+            <div class="container">
+                <a href="https://wa.me/1234" target="_blank" class="btn btn-success me-2">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://maps.app.goo.gl/bJzhqyTJp9PVJXPt6" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-map-marker-alt"></i> Dirección
+                </a>
+            </div>
+        </footer>
+        <script>
+            window.addEventListener('load', function () {
+                // Selecciona todas las imágenes en la página
+                const imagenes = document.querySelectorAll('img');
+                
+                // Agrega la clase 'salto-imagen' a todas las imágenes
+                imagenes.forEach(imagen => {
+                    imagen.classList.add('salto-imagen');
+                });
+            });
+        </script>        
+    </body>
+</html>    

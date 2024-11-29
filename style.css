@@ -1,0 +1,196 @@
+body {
+    background-color: #2e2e2c;
+    font-family: "Montserrat", serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    overflow: hidden; /* Oculta las barras de desplazamiento */
+    height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+    width: 100vw; /* Asegura que el contenido ocupe todo el ancho */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Para Chrome, Safari y Edge */
+}
+
+html {
+    overflow: hidden; /* También ocultar en el elemento raíz */
+    height: 100%; /* Asegura que el HTML también ocupe toda la altura */
+}
+
+body {
+    overflow: scroll;
+    scrollbar-width: none; /* Para Firefox */
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 16px; 
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap; /* Para hacer que los elementos se ajusten en pantallas pequeñas */
+}
+
+.izquierdo {
+    flex: 1;
+    text-align: center;
+}
+
+.izquierdo h3 {
+    margin-bottom: 20px;
+}
+
+.izquierdo ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.izquierdo li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.producto {
+    font-size: 18px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.precio {
+    margin-left: 10px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.derecho {
+    flex: 1;
+    text-align: center;
+}
+
+.derecho img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.izquierdo h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #fc8202; /* Fondo naranja */
+    color: black; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Ajusta el ancho al contenido */
+}
+
+.footer {
+    background-color: #2e2e2c;
+    padding: 20px 0; /* Espaciado para el footer */
+    text-align: center;
+}
+
+footer .btn {
+    background-color: #fc8202;
+    color: black;
+    font-size: 16px; /* Ajustar el tamaño del texto */
+    padding: 10px 20px; /* Ajustar el relleno */
+    border-radius: 8px; /* Bordes redondeados */
+    
+}
+
+.btn:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el puntero */
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+/* Definimos la animación de salto */
+@keyframes salto {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Salta hacia arriba */
+    }
+    100% {
+        transform: translateY(0); /* Vuelve a su posición original */
+    }
+}
+
+/* Aplicamos la animación a las imágenes */
+.salto-imagen {
+    animation: salto 0.6s ease-out;
+    animation-delay: 0.5s; /* Asegura que la animación se active después de cargar */
+}
+
+
+/* Extra Pequeño (XS) */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .derecho img {
+        display: none; /* Oculta imágenes grandes en pantallas muy pequeñas */
+    }
+    .container {
+        background: url('platoPrincipal.png') no-repeat center center / cover;
+    }
+}
+
+/* Pequeño (SM) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .derecho img {
+        max-width: 80%;
+    }
+}
+
+/* Mediano (MD) */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+    .derecho img {
+        max-width: 90%;
+    }
+}
+
+/* Grande (LG) */
+@media (max-width: 1200px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Extra Grande (XL) */
+@media (min-width: 1201px) {
+    .container {
+        padding: 20px 40px;
+    }
+    .derecho img {
+        max-width: 100%;
+    }
+}
